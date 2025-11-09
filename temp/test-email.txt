@@ -1,0 +1,35 @@
+## Dear Participant, **{firstName} {lastName}**, 👋
+<br>
+
+Thank you for attending and actively participating in the **"TS+Playwright"** masterclass.
+<br>
+
+
+In this letter you will find your **Certificate of Participation** attached.
+You can share this certificate as proof of participating in the community live and your interest in the industry.
+<br>
+
+
+Feel free to share it as confirmation of your involvement in the QA community and your interest in the field.
+<br>
+
+---
+
+### Resources
+
+The workshop presentation and useful materials can be found at the links below:
+
+* [Workshop Presentation](https://example.com/presentation-link)
+* [Useful Materials](https://example.com/materials-link)
+
+---
+
+Best wishes,
+
+**Maria Chesnova**
+Masterclass Speaker
+
+**My Contacts:**
+* [LinkedIn](https://example.com/)
+* [Telegram](https://example.com/)
+* [Instagram](https://example.com/)
