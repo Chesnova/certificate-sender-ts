@@ -10,6 +10,7 @@ This application is built using TypeScript on Node.js.
 
 1.  **Node.js (LTS recommended)**
 2.  **npm (Node Package Manager)**
+3.  **Graphics Dependencies** (Requires compilation support for the `canvas` library, usually handled automatically by `npm install`).
 
 ### Installation & Setup
 
@@ -27,22 +28,42 @@ This application is built using TypeScript on Node.js.
     npm install
     ```
 
-    _(The main dependencies used so far are `csv-parser` and `@types/node`.)_
+3.  **Configure TypeScript:**
+    A base `tsconfig.json` is included to configure the compiler for modern Node.js module resolution.
 
 ---
 
-## ⚙️ Implemented Modules: Phase 1
+## ⚙️ Implemented Modules: Phase 2 Complete
 
 ### 1. Data Processor (`src/DataProcessor.ts`)
 
 This module is responsible for handling input files:
 
-- Reading participant data from **`temp/test-participants.csv`**.
+- Reading participant data from **`temp/test-participants.csv`** (CSV with `firstName,lastName,email` headers).
 - Reading the email body template (Markdown format) from **`temp/test-email.txt`**.
 
-### 2. Input Files Required
+### 2. Certificate Generator (`src/Generator.ts`)
 
-For testing the `DataProcessor`, ensure the following placeholder files exist in the **`temp/`** directory:
+This module handles the graphics processing:
 
-1.  `test-participants.csv` (CSV with `firstName,lastName,email` headers).
-2.  `test-email.txt` (The email template in Markdown format).
+- Loads the PNG template (`temp/certificate_template.png`).
+- Draws the participant's name using the **Arial** font (`30px`) in color **`#595959`** onto the template (at coordinates X: 27, Y: 245).
+- Saves the final image to the **`certificates/`** directory. (This directory is excluded via `.gitignore`).
+
+### 3. Required Input Files 📁
+
+For successful operation and testing, ensure the following placeholder files exist in the **`temp/`** directory:
+
+- `test-participants.csv`: Contains the list of participants.
+- `test-email.txt`: Contains the email template body (Markdown format).
+- `certificate_template.png`: The certificate image template.
+
+---
+
+## 🧪 Testing the Generator (Manual)
+
+To manually test the certificate output:
+
+```bash
+npm run test:cert
+```
